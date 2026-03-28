@@ -26,23 +26,40 @@ function carregarLista() {
     .then(res => res.json())
     .then(dados => {
         let lista = document.getElementById("lista");
-        lista.innerHTML = "";
+
+        // estrutura da tabela
+        let tabela = `
+            <table class="table table-striped table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Título</th>
+                        <th>Gênero</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
 
         dados.forEach((item, index) => {
-            let li = document.createElement("li");
-
-            li.textContent = item.titulo + " | " + item.genero + " ";
-
-            let botao = document.createElement("button");
-            botao.textContent = "Excluir";
-
-            botao.onclick = function () {
-                excluirItem(index);
-            };
-
-            li.appendChild(botao);
-            lista.appendChild(li);
+            tabela += `
+                <tr>
+                    <td>${item.titulo}</td>
+                    <td>${item.genero}</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm" onclick="excluirItem(${index})">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            `;
         });
+
+        tabela += `
+                </tbody>
+            </table>
+        `;
+
+        lista.innerHTML = tabela;
     });
 }
 
