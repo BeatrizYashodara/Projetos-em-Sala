@@ -31,14 +31,14 @@
                 <div class="col">
 
                     <div class="input-group input-group-lg mb-2">
-                    <span class="input-group-text" id="inputGroup-sizing-lg"> Título do Filme </span>
+                    <span class="input-group-text" id="inputGroup-sizing-lg" style="flex: 0 0 20%"> Título do Filme </span>
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="titulo">
                     </div>
 
                     <br> 
                     
                     <div class="input-group input-group-lg mb-2">
-                    <span class="input-group-text" id="inputGroup-sizing-lg"> Gênero </span>
+                    <span class="input-group-text" id="inputGroup-sizing-lg" style="flex: 0 0 20%"> Gênero </span>
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="genero">
                     </div>
 
@@ -48,25 +48,27 @@
 
                 <br> 
 
-                <div class="d-flex justify-content-end">
-
+                
+                    <div class="col">
                     <!-- botões -->
-                    <div class="row">
-                        <div class="col-md-8 mb-2">
+                    <div class="row justify-content-end">
+                        <div class="col-md-4 mb-2">
                             <button type="button" class="btn btn-outline-primary btn-lg" onclick="toggleLista()">
                             <i class="bi bi-card-list"></i> 
                             Mostrar / Ocultar Lista</button>
                         </div>
 
-                        <div class="col-md-2 mb-2">
+                        <div class="col-md-3 mb-2">
                             <button type="button" class="btn btn-primary btn-lg" onclick="adicionarItem()"> 
                             <i class="bi bi-patch-plus"></i> 
                             Adicionar</button>
                         </div>
 
                     </div>
+                    </div>
+                    
 
-                </div> 
+                
 
             
 
@@ -84,9 +86,10 @@
 
         </div>
     
-    </div>
-    <!-- título + divisória -->
 
+
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
