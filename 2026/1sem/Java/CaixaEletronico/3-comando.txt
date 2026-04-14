@@ -1,0 +1,14 @@
+Objetivo: Consolidar todos os conceitos da aula.
+Descrição:
+1. Transforme a classe Conta da aula anterior em uma classe abstrata. Adicione um método
+abstrato imprimirExtrato().
+2. Crie uma interface Tributavel com um método double getValorImposto().
+3. Faça ContaCorrente herdar de Conta e implementar Tributavel. O imposto é 0.5% do valor
+de cada saque.
+4. Faça ContaPoupanca apenas herdar de Conta.
+5. Implemente imprimirExtrato() nas duas classes para exibir o saldo e informações específicas
+(ex: "Conta Corrente com taxa de saque").
+6. Crie uma classe SeguroDeVida que não herda de Conta, mas implementa Tributavel com um
+valor fixo de imposto (ex: R$ 42,00).
+7. Na App, crie um ArrayList de Tributavel. Adicione instâncias de ContaCorrente e
+SeguroDeVida. Some os tributos de todos os itens da lista e exiba o total.
