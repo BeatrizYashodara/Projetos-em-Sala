@@ -1,0 +1,14 @@
+PARA FIXAR: Evoluindo o Caixa Eletrônico com
+Exceções
+● Objetivo: Consolidar com conceitos anteriores (herança da Aula 06, encapsulamento
+da 04).
+● Descrição:
+1. Na classe abstrata Conta (da Aula 06), adicione método sacar(double valor)
+que lança SaldoInsuficienteException (personalizada).
+2. Em ContaCorrente e ContaPoupanca, implemente com try-catch interno se
+precisar.
+3. Use Template Method para um TratadorTransacao que gerencie
+saques/depósitos.
+4. Na App, menu com tratamento: se exceção, use Strategy (ex: notificar ou retry).
+5. Integre Tributavel: Se exceção em imposto, logue e continue.
+● Teste: Simule saques inválidos e veja o sistema gracioso!
